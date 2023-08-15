@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Candidatos Seleccionados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Candidatos Seleccionados</h1>
+    <form action="procesar_candidatos.php" method="post">
+      <input type="hidden" name="oferta_id" value="123"> <!-- Aquí deberías reemplazar con el ID de la oferta real -->
+      <div class="form-group">
+        <label for="respuesta">Titulo de la oferta</label>
+        <select id="respuesta" name="respuesta" required>
+          <option value="" disabled selected>Seleccione un cargo</option>
+          <option value="no">Analista de desarrollo</option>
+          <option value="si">Desarrollador senior</option>
+          <option value="si">Desarrollador front-end</option>
+          <option value="si">Desarrollador back-end</option>
+          <option value="si">Desarrollador java</option>
+          <option value="si">Desarrollador php</option>
+          <option value="si">Desarrollador web</option>
+          <option value="si">Desarrollador android</option>
+          <option value="no">Ingenieria en Sistemas</option>
+          <option value="no">Ingenieria de Software</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="respuesta">Candidatos aprobados</label>
+        <select id="respuesta" name="respuesta" required>
+          <option value="" disabled selected>Seleccione un candidato</option>
+          <option value="no">Juan Pérez Sánchez</option>
+          <option value="no">María García Rodríguez</option>
+          <option value="si">Carlos Rodríguez López</option>
+          <option value="no">Laura Martínez González</option>
+          <option value="no">Andrés López Martínez</option>
+          <option value="no">Ana Sánchez Fernández</option>
+          <option value="no">David Fernández Pérez</option>
+          <option value="no">Paula González Torres</option>
+          <option value="no">Alejandro Torres Ramírez</option>
+          <option value="no">Marta Ruiz Herrera</option>
+          <option value="no"></option>
+        </select>
+      </div>
+      Se enviara una notificación al cantidato, que ha sido seleccionado.<br>
+      <br><button type="submit">Enviar notificación</button>
+    </form>
+  </div>
+</body>
+</html>

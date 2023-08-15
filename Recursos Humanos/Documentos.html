@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Candidatos Seleccionados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 50px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DOCUMENTACIÓN</h1>
+    <form action="procesar_candidatos.php" method="post">
+      <input type="hidden" name="oferta_id" value="123">
+      <!-- Aquí deberías reemplazar con el ID de la oferta real -->
+      <div class="form-group">
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+              <label for="archivo">HOJA DE VIDA:</label>
+              <input type="file" name="archivo" id="archivo">
+              <button type="submit" name="submit">Subir</button>
+              <br><br><label for="archivo">CC/CE:</label>
+              <input type="file" name="archivo" id="archivo">
+              <button type="submit" name="submit">Subir</button>
+              <br><br><label for="archivo">DIPLOMA BACHILLER:</label>
+              <input type="file" name="archivo" id="archivo">
+              <button type="submit" name="submit">Subir</button>
+              <br><br><label for="archivo">DIPLOMA TÉCNICO Y/O PROFESIONAL:</label>
+              <input type="file" name="archivo" id="archivo">
+              <button type="submit" name="submit">Subir</button>
+              <br><br><label for="archivo">CERTIFICADO LABORAL:</label>
+              <input type="file" name="archivo" id="archivo"><br>
+              <br><br><button type="submit" name="submit">Cargar documentos</button>
+          </form>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
